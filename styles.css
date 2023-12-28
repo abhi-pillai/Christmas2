@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("https://th.bing.com/th/id/OIP.DIxQlWl2AnFCnC5flgCLqwHaEK?rs=1&pid=ImgDetMain");
+    background-repeat: no-repeat;  
+    background-size:cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow:hidden; 
+}
+
+.main {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    color: ghostwhite;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+#snowfall {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    transform: rotate(30deg); 
+}
+
+.music {
+    margin-top: 20px;
+}
+
+.MButton {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: aquamarine;
+    padding: 10px 20px;
+    font-size: 1em;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .image {
+        max-width: 80%;
+    }
+
+    #snowfall {
+        transform: rotate(-20deg); /* Adjust slant for smaller screens */
+    }
+}
+.snowflake {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #fff; 
+    border-radius: 50%;
+    animation: snowfall linear infinite;
+    transform: rotate(30deg); 
+}
+
+@keyframes snowfall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
